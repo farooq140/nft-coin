@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
+import {DeployBasicNft} from "../script/DeployBasicNft.s.sol";
+import {BasicNft} from "../src/BasicNft.sol";
+import {Test, console2} from "forge-std/Test.sol";
+// import {MintBasicNft} from "../script/Interactions.s.sol";
 
 contract BasicNftTest is Test{
      string constant NFT_NAME = "Dogie";
@@ -14,12 +18,12 @@ contract BasicNftTest is Test{
     address public constant USER = address(1);
 
     function setUp() public {
-        if (!isZkSyncChain()) {
-            deployer = new DeployBasicNft();
-            basicNft = deployer.run();
-        } else {
+        // if (!isZkSyncChain()) {
+            // deployer = new DeployBasicNft();
+            // basicNft = deployer.run();
+        // } else {
             basicNft = new BasicNft();
-        }
+        // }
     }
 
     function testInitializedCorrectly() public view {
