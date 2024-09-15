@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.18;
 
-import {DeployMoodNft} from "../script/DeployMoodNft.s.sol";
+import {DeployMoodNft} from "../../script/DeployMoodNft.s.sol";
 import {Test, console} from "forge-std/Test.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
@@ -13,7 +13,7 @@ contract DeployMoodNftTest is Test {
         deployer = new DeployMoodNft();
     }
 
-    function testConvertSvgToUri() public view {
+    function testConvertSvgToUri () public view {
         string memory expectedUri =
             "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj4NCiAgPHRleHQgeD0iMjAwIiB5PSIyNTAiIGZpbGw9ImJsYWNrIj4NCiAgICBIaSEgWW91IGRlY29kZWQgdGhpcyF7IiAifQ0KICA8L3RleHQ+DQo8L3N2Zz4NCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0K";
         string memory svg =
