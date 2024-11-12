@@ -16,16 +16,3 @@ contract DeployBasicNft is Script {
         return basicNft;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
